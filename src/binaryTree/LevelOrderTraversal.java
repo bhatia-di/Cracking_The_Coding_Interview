@@ -41,19 +41,8 @@ public class LevelOrderTraversal {
             }
 
             output.add(listOfCurrentLevel);
-
-
-
         }
 
         return output;
-
-
-
-
-
-
-
-
     }
 }
