@@ -27,7 +27,7 @@
 
 
 **# Stack push and pop **
-/**
+
 
     Stack<Integer> a = new Stack<>();
     a.push( 5);
@@ -36,4 +36,4 @@
         System.out.println(a.pop());
     }
 
-**/
+**# While using 2 pointer technique, think about the first case where **either pointer get exhausted** **
