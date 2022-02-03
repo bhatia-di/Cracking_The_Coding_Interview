@@ -5,7 +5,8 @@ import java.util.List;
 
 public class Cisco {
 
-// check for valid ip
+// check for valid IP
+
     public static void main(String[] args) {
         String ip = "64.58.90.122";
         String[] input = ip.split("\\.");
