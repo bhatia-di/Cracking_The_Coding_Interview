@@ -1,4 +1,6 @@
-package strings;
+package assesment;
+
+import strings.Coordinate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +8,24 @@ import java.util.List;
 public class WayFail {
 
 
-    public static void main(String[] args) {
+
+
+    public static int findORow(String[] chess) {
+        int index = 0;
+        for(String s: chess) {
+            if (s.contains("O")) {
+                return  index;
+            }
+            index++;
+        }
+        return -1;
+    }
+
+
+
+
+
+    public static void computeIntervals(String[] args) {
 
 
         //int[] A= new int[]{2,4,1,6,5,9,7};
