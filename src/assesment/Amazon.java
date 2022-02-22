@@ -14,24 +14,6 @@ public class Amazon {
         int[] zeroCol = new int[list[0].length()];
 
 
-//        for (int i=0; i<list.length;i++) {
-//            Matcher matcher = pattern1.matcher(list[i]);
-//            int count = 0;
-//            while (matcher.find()) {
-//                count++;
-//            }
-//            oneRow[i] = count;
-//            System.out.println("String " + list[i] + " count 1 " + oneRow[i]);
-//            Matcher matcher2 = pattern2.matcher(list[i]);
-//            int count0 = 0;
-//            while (matcher2.find()) {
-//                count0++;
-//            }
-//            zeroRow[i] = count0;
-//            System.out.println("String " + list[i] + " count 0 " + zeroRow[i]);
-//
-//        }
-
         for (int i=0; i<list.length; i++) {
 
             String s = list[i];
