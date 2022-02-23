@@ -18,21 +18,18 @@ public class MinimumDepthTree {
             while(!queue.isEmpty()) {
                 int size = queue.size();
                 levels++;
-                System.out.println("--- levels increased " + levels);
 
                 TreeNode current = queue.remove();
-                System.out.println("--- Current value " + current.val);
 
                 for (int i=0; i<size; i++) {
                     if (current.left == null && current.right == null) {
-                        System.out.println("In children, current value " + current.val);
 
-                        minValue = Math.min(minValue, levels);
+                       return levels;
 
                     }
 
 
-                    if (levels > minValue) return minValue;
+
                     if (current.left != null) queue.add(current.left);
                     if (current.right != null) queue.add(current.right);
                 }
