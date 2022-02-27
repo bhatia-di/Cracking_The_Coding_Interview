@@ -39,11 +39,6 @@
 **# While using 2 pointer technique, think about the first
 case where **either pointer get exhausted** **
 
-#Say you want to sort a 2D array based on the first element
-
-`int[][] intervals = [[1,3],[2,6],[33, 39], [8,10],[15,18]]
-Arrays.sort(intervals, (arr1, arr2) -> Integer.compare(arr1[0], arr2[0]);`
-`output: [[1,3],[2,6], [8,10],[15,18], [33, 39]]`
 
 #Regex Pattern Matching
 `String pattern = "[\\(]{1}[0-9]+[\\)]{1}$";
