@@ -1,20 +1,27 @@
-~~#Comparator
-`int compare(T o1, T o2) {
-if (o1 < o2)
-return -1;
-else if (o1 == o2)
-return 0;
-else // o1 > o2
-return 1;
-}`
+# Comparator
+```
 
-#Say you want to sort a 2D array based on the first element
+int compare(T o1, T o2) {
+    if (o1 < o2)
+        return -1;
+    else if (o1 == o2)
+        return 0;
+    else // o1 > o2
+    return 1;
+}
+```
 
-`int[][] intervals = [[1,3],[2,6],[33, 39], [8,10],[15,18]]
+
+# Say you want to sort a 2D array based on the first element
+
+```
+int[][] intervals = [[1,3],[2,6],[33, 39], [8,10],[15,18]]
 Arrays.sort(intervals, (arr1, arr2) -> Integer.compare(arr1[0], arr2[0]);`
-`output: [[1,3],[2,6], [8,10],[15,18], [33, 39]]`
+output: [[1,3],[2,6], [8,10],[15,18], [33, 39]]`
+```
 
-#Another way to write a custom sort for any array String based on a custom order
+# Another way to write a custom sort for any array String based on a custom order
+```
 
     Comparator<String> logComparator = new Comparator<String>() {
 
@@ -49,8 +56,12 @@ Arrays.sort(intervals, (arr1, arr2) -> Integer.compare(arr1[0], arr2[0]);`
        
         }
     };
-   `Arrays.sort(logs, logComparator);`
+   Arrays.sort(logs, logComparator);
+```
+
+```
    
 if par1 > par2 return -1
 if par1 < par2 return 1
 is par1 == par2 return 0
+```
