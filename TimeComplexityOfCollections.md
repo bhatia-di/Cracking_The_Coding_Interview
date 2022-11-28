@@ -40,6 +40,15 @@ Time complexity = O(log(log N))
 | Exponential  | e ^ N  |
 | N factorial  | N! |
 
+# Some formulas to calculate 
+
+c + c + c ..... + c = n * c
+1 + 2 + 3 + ⋯ + n = n (n+1) / 2
+1 + 4 + 9 + ⋯ + n = n (n + 1) (2n + 1) / 6
+r ^ 0 + r ^ 1 + r ^ 2 + .. + r ^ n = (r ^ (n + 1) - 1) / (r - 1)
+
+
+
 **ArrayList in Java**
 The time complexity of the common operations, at a high level:
 
