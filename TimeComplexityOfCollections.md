@@ -1,5 +1,36 @@
 ###### **Cracking the Coding Interview with Leetcode and oher resources**
 
+# Looping time complexities
+```
+for (i =1 to n) {
+// O(1) operations
+}
+Time complexity = O(N)
+
+for (i =1 ; i<n; i=i*2) {
+// O(1) operations
+}
+Time complexity = O(log N)
+
+for (i=n; i>=0; i=i/2 ) {
+// O(1) operations
+}
+Time complexity = O(log N)
+
+for (i =2 ; i<n; i=pow(i,c)) {
+// O(1) operations
+}
+Time complexity = O(log(log N))
+
+```
+
+# Time complexity in ascending order of growth
+
+| Function  | Name |
+| ------------- | ------------- |
+| Constant  | O(1)  |
+| Content Cell  | Content Cell  |
+
 **ArrayList in Java**
 The time complexity of the common operations, at a high level:
 
