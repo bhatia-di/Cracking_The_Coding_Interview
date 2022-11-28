@@ -29,7 +29,16 @@ Time complexity = O(log(log N))
 | Function  | Name |
 | ------------- | ------------- |
 | Constant  | O(1)  |
-| Content Cell  | Content Cell  |
+| Logarithmic  | O(log N)  |
+| Log Square  | O(log ^ 2 N)  |
+| Root N  | Sq root(N)  |
+| Linear | O( N)  |
+| Linearithmic  | N O(log N)  |
+| Quadratic  | N ^2  |
+| Cubic  | N ^ 3 |
+| Quartic  | N ^ 4  |
+| Exponential  | e ^ N  |
+| N factorial  | N! |
 
 **ArrayList in Java**
 The time complexity of the common operations, at a high level:
