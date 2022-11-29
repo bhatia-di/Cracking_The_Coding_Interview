@@ -1,5 +1,59 @@
 ###### **Cracking the Coding Interview with Leetcode and oher resources**
 
+# Looping time complexities
+```
+for (i =1 to n) {
+// O(1) operations
+}
+Time complexity = O(N)
+
+for (i =1 ; i<n; i=i*2) {
+// O(1) operations
+}
+Time complexity = O(log N)
+
+for (i=n; i>=0; i=i/2 ) {
+// O(1) operations
+}
+Time complexity = O(log N)
+
+for (i =2 ; i<n; i=pow(i,c)) {
+// O(1) operations
+}
+Time complexity = O(log(log N))
+
+```
+
+# Time complexity in ascending order of growth
+
+| Function  | Name |
+| ------------- | ------------- |
+| Constant  | O(1)  |
+| Logarithmic  | O(log N)  |
+| Log Square  | O(log ^ 2 N)  |
+| Root N  | Sq root(N)  |
+| Linear | O( N)  |
+| Linearithmic  | N O(log N)  |
+| Quadratic  | N ^2  |
+| Cubic  | N ^ 3 |
+| Quartic  | N ^ 4  |
+| Exponential  | e ^ N  |
+| N factorial  | N! |
+
+# Some formulas to calculate 
+
+c + c + c ..... + c = n * c
+
+1 + 2 + 3 + ⋯ + n = n (n+1) / 2
+
+
+1 + 4 + 9 + ⋯ + n = n (n + 1) (2n + 1) / 6
+
+
+r ^ 0 + r ^ 1 + r ^ 2 + .. + r ^ n = (r ^ (n + 1) - 1) / (r - 1)
+
+
+
 **ArrayList in Java**
 The time complexity of the common operations, at a high level:
 
@@ -27,3 +81,22 @@ contains() – also has O(n) time complexity
 For HashSet, LinkedHashSet, and EnumSet the add(), remove() and contains() 
 operations **cost constant O(1)** time. 
 Thanks to the internal HashMap implementation.
+
+# Ways to implement Hashset
+
+       List<String> worddict;       
+       Set<String> wordSet = new HashSet(wordDict);
+       String[] array;
+        
+       //supported operations - O(1)
+       wordSet.add("abc")
+       
+       // O(1)
+       wordSet.remove("abc")
+       wordSet.clear()
+       wordSet.size();
+       // O(1)
+       wordSet.contains("abc")
+       wordSet.isEmpty();
+       wordSet.toArray(array);
+
