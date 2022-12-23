@@ -19,6 +19,10 @@ import java.util.Queue;
  Since we can have a maximum of N/2 nodes at any level (this could happen only at the lowest level),
  therefore we will need O(N) space to store them in the queue.
 
+              1
+          2     3
+        4  5   6 7
+
  */
 public class LevelOrderTraversal {
 
