@@ -8,3 +8,7 @@ for (int i=0; i<s.length(); i++) {
     }    
 }
 ```
+# Sort an array of strings TC: O (N Log(N))
+```
+Arrays.sort(strs);
+```
