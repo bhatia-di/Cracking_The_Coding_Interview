@@ -30,7 +30,12 @@ undefined means var has been declared but not assigned a value
 
 ## explain null ?
 intentional absence of data
+The value null represents the intentional absence of any object value.
 
+```
+var user = null;
+console.log(typeof user); //object
+```
 ## explain null versus undefined ?
 undefined means not assigned a value
 
