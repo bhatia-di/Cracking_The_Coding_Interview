@@ -1,4 +1,7 @@
 # React interview questions
+Reference:
+https://github.com/sudheerj/reactjs-interview-questions#what-is-virtual-dom
+
 
 ## What are the major features of React?
 - It uses VirtualDOM instead of RealDOM considering that RealDOM manipulations are expensive.
@@ -28,7 +31,21 @@ A key is a special string attribute you should include when creating arrays of e
 ## Hooks in React
 
 - useEffect() - call API
+- useState()
+- useMemo()
+- useContext()
+- useRef()
+- useReducer()
 - 
+
+## context api versus redux
+
+## rules follow for hooks
+1. call hooks on the highest level at the top level of component
+2. call in functional components and it would not work in class components
+
+## Design patterns
+
 
 ## ref Hook in React
 
@@ -89,5 +106,70 @@ import("./Home").then(() => {
 
 ## SEO on webpage
 
+## Why is class -> classname in React
+class is a reserved in HTML
+
+## Data flow in react
+unidirectional - top to bottom
+
+## How to avoid prop drilling?
+context api
+
+## API Call after component is mounted
+componentDidMount - []
+
+## What is Virtual DOM
+- in memory representation of the virtual dom
+- sync with real-dom
+- 
+
+## HOC
+- withRouter : 
+- Advantages:
+  - add properties like closures
+``` 
+    function withMouse(Component) {
+    return class extends React.Component {
+    render() {
+    return (
+        <Mouse render={mouse => (
+        <Component {...this.props} mouse={mouse} />
+            )}/>
+        );
+    }
+    }
+    }
+```
+
+## render props
+A component with render prop takes a function which returns a react element.
+It calls its own implementation for rendering instead of using  the render logic
 
 
+## custom hook
+
+share logic between 2 functional components. 
+use begins with
+they actually don't share the state
+
+```
+function FriendStatus(props) {
+const [isOnline, setIsOnline] = useState(null);
+useEffect(() => {
+function handleStatusChange(status) {
+setIsOnline(status.isOnline);
+}
+ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange);
+return () => {
+ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);
+};
+});
+
+if (isOnline === null) {
+return 'Loading...';
+}
+return isOnline ? 'Online' : 'Offline';
+}
+```
+
+## Accessibility
