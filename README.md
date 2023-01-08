@@ -11,8 +11,7 @@
 
 **# Binary Search on a sorted List**
         
-
-    ```
+```
 int binarySearch(int arr[], int l, int r, int x)
         {
             if (r >= l) {
@@ -26,7 +25,7 @@ int binarySearch(int arr[], int l, int r, int x)
                 return -1;
             }
         }
-    ```
+```
     
 
 **# Inorder traversal on BINARY SEARCH TREE RESULTS in ASCENDING ORDER**
