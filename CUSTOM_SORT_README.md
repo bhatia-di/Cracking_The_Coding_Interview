@@ -59,9 +59,10 @@ output: [[1,3],[2,6], [8,10],[15,18], [33, 39]]`
    Arrays.sort(logs, logComparator);
 ```
 
+# General Idea behind designing custom sort function
 ```
    
-if par1 > par2 return -1
-if par1 < par2 return 1
-is par1 == par2 return 0
+if parmeter1 > parmeter2 return -1
+if parmeter1 < parmeter2 return 1
+is parmeter1 == parmeter2 return 0
 ```
