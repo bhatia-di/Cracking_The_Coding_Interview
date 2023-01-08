@@ -1,15 +1,13 @@
-###### **Cracking the Coding Interview with Leetcode and oher resources**
+# **Cracking the Coding Interview with Leetcode and oher resources**
 
-**# Reversing, Sorting A List**
+## Reversing, Sorting A List
 ```
-
-
     List<String> colors = new ArrayList<>(Arrays.asList("RED", "BLUE", "BLACK"));
     Collections.reverse(colors);
     Collections.sort(colors);
 ```
 
-**# Binary Search on a sorted List**
+## Binary Search on a sorted List
         
 ```
 int binarySearch(int arr[], int l, int r, int x)
@@ -28,10 +26,10 @@ int binarySearch(int arr[], int l, int r, int x)
 ```
     
 
-**# Inorder traversal on BINARY SEARCH TREE RESULTS in ASCENDING ORDER**
+## Inorder traversal on BINARY SEARCH TREE RESULTS in ASCENDING ORDER**
 
 
-# Stack push and pop 
+## Stack push and pop 
 
 ```
 
@@ -45,11 +43,11 @@ int binarySearch(int arr[], int l, int r, int x)
 
 ```
 
-# While using 2 pointer technique, think about the first
+## While using 2 pointer technique, think about the first
 case where **either pointer get exhausted** **
 
 
-# Regex Pattern Matching
+## Regex Pattern Matching
 ```
 String pattern = "[\\(]{1}[0-9]+[\\)]{1}$";
 Pattern endsWith = Pattern.compile(pattern);
