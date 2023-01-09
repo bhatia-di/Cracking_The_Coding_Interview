@@ -93,5 +93,4 @@ Thanks to the internal **HashMap** implementation.
        
        wordSet.isEmpty();
        wordSet.toArray(array);
-
 ```

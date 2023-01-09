@@ -58,6 +58,45 @@ THEN salary
 ELSE 0 END) as bonus from Employees order by employee_id;
 ```
 
+## assign a value in select
+- create a case based statement as above
+- write an if statement
+- ```
+  SELECT
+  IF (Grade >= 8, Name, NULL),
+  Grade,
+  Marks
+  FROM
+  (SELECT
+  Name,
+  (SELECT Grade FROM Grades WHERE (Min_Mark <= Marks) AND (Marks <= Max_Mark)) AS Grade,
+  Marks
+  FROM Students) As MyStudents
+  ORDER BY Grade DESC, Name;
+  ```
+  
+
+## dynamic order by
+```
+SELECT
+Case when G.Grade < 8 THEN NULL ELSE S.Name END,
+G.Grade,
+S.Marks
+FROM
+Students AS S
+INNER JOIN
+Grades As G
+ON S.Marks BETWEEN G.Min_Mark and G.Max_Mark
+ORDER BY
+
+    G.Grade DESC,
+    Case when G.Grade < 8 THEN NULL ELSE S.Name END,    
+    Case when G.Grade < 8 THEN S.Marks else 0 end
+
+;
+```
+
+
 ## Distinct records
 
 ```
@@ -105,5 +144,9 @@ SELECT CONCAT(`id`, '-', `name`) AS `identification`, `age` FROM `new_schema`.`u
 
 ## **The default ordering of ORDER is ascending order from small to large.**
 
+## Get length of the string using SELECT LENGTH("abc") => 3
+
+- The FLOOR() function returns the largest integer value that is smaller than or equal to a number.
+- The CEILING() function returns the smallest integer value that is larger than or equal to a number.
 
 
