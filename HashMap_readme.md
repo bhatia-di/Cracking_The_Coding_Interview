@@ -28,6 +28,10 @@ public void iterateValues(Map<String, Integer> map) {
     tracker.put(1, 100);
     tracker.put(1, 150);
     tracker.get(1); // returns 100
+    tracker.remove(1); // key based removal
+    tracker.clear(); // clearing a hashmap
+    
+    
 ```
 
 ## HashMap insertion and retrieval takes O(1) time complexity.

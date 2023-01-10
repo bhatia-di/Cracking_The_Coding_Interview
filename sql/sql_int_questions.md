@@ -3,6 +3,7 @@ Reference 1:
 https://www.toptal.com/sql/interview-questions
 https://leetcode.com/explore/learn/card/sql-language
 https://leetcode.com/study-plan/sql/?progress=xi2csy6m
+https://docs.google.com/spreadsheets/d/1GOO4s1NcxCR8a44F0XnsErz5rYDxNbHAHznu4pJMRkw/edit#gid=0
 
 
 Different Types of SQL JOINs
