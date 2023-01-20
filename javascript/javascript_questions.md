@@ -1,6 +1,8 @@
 # Javascript interview questions
 Reference:
 1. https://github.com/sudheerj/javascript-interview-questions
+2. https://www.w3docs.com/learn-javascript.html
+3. 
 
 ## Why js is a dynamic language?
 
