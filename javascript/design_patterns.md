@@ -101,3 +101,6 @@ const truck = vehicleFactory.createVehicle("truck") // Truck { turnOn: [Function
 const motorcycle = vehicleFactory.createVehicle("motorcycle") // Motorcycle { turnOn: [Function: turnOn], name: 'Motorcycle', wheels: 2 }
 ```
 
+## Builder Pattern
+- This patterns allows to create objects in **steps**
+- It basically has certain methods and functions that add properties or methods to our object
