@@ -44,6 +44,7 @@ var removeDuplicates = function(s) {
 
     }
 
+
     return newArrayTracker.join('');
 
 

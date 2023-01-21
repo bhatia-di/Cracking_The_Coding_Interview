@@ -21,3 +21,14 @@ let arrayIntegers3 = arrayIntegersOriginal3.splice(3, 1, "a", "b", "c"); //retur
 ```
 Note: Splice method modifies the original array and returns the deleted array.
 
+
+## array to string
+```
+let arr = [1,2,3];
+console.log(arr.join(''));
+//123
+
+console.log(arr.join(','));
+//1,2,3
+
+```
