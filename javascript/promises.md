@@ -69,16 +69,16 @@ fetch('path-to-the-resource-to-be-fetched')
 > What is Axios
 - Axios is a Javascript library used to make HTTP requests from node.js or XMLHttpRequests from the browser and it supports the Promise API that is native to JS ES6. It can be used intercept HTTP requests and responses and enables client-side protection against XSRF. It also has the ability to cancel requests. 
 
-| Axios                                                                    | Fetch                                                                                          |
-|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
-| Axios is a stand-alone third party package that can be easily installed. | Axios is a stand-alone third party package that can be easily installed.                       |
-| Axios enjoys built-in XSRF protection.	                                  | No such built in protection                                                                    |
-| It used data property to send something in the header                    | uses body property to send something in the header                                             |
-| Its data property is an object                                           | the body property needs to be stringified                                                      |
-| Axios request is ok when **status** is 200 and **statusText** is ‘OK’.	          | 200 Fetch request is ok when response object contains the **ok** property. |
-| automatically response is converted to json                              | its a 2 step process. 1. make the request 2. convert response to json                          |
-| can cancel request and timeout                                           | no such process                                                                                |
-| intercept HTTP request                                                   | no way to intercept a request                                                                  |
-| built in support for download progress                                   | no way to intercept a request                                                                  |
-| axios get calls ignore data in the request                               | fetch can have body content with a GET call                                                    |
+| Axios                                                                    | Fetch                                                                       |
+|--------------------------------------------------------------------------|-----------------------------------------------------------------------------|
+| Axios is a stand-alone third party package that can be easily installed. | Axios is a stand-alone third party package that can be easily installed.    |
+| Axios enjoys built-in XSRF protection.	                                  | No such built in protection                                                 |
+| It used data property to send something in the header                    | uses body property to send something in the header                          |
+| Its data property is an object                                           | the body property needs to be stringified                                   |
+| Axios request is ok when **status** is 200 and **statusText** is ‘OK’.	  | 200 Fetch request is ok when response object contains the **ok** property.  |
+| automatically response is converted to json                              | its a 2 step process. 1. make the request 2. convert response to json       |
+| can cancel request and timeout                                           | no such process                                                             |
+| intercept HTTP request                                                   | no way to intercept a request                                               |
+| built in support for download progress                                   | no way to intercept a request                                               |
+| axios get calls ignore data in the request                               | fetch can have body content with a GET call                                 |
 

@@ -173,3 +173,8 @@ return isOnline ? 'Online' : 'Offline';
 ```
 
 ## Accessibility
+
+
+## What is babel used for?
+Web browsers dont understand JSX objects. We need to convert the JSX objects into JS objects, thats where babel is used
+Babel transforms JSX into JS file
