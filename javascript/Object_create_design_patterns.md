@@ -82,16 +82,20 @@ turnOn = () => console.log("sssssssssssssssssssssssssssssshhhhhhhhhhham!!")
 // And and abstract factory that works as a single point of interaction for our clients
 // Given the type parameter it receives, it will call the corresponding concrete factory
 const vehicleFactory = {
+
 createVehicle: function (type) {
 switch (type) {
-case "car":
-return new Car()
-case "truck":
-return new Truck()
-case "motorcycle":
-return new Motorcycle()
-default:
-return null
+    case "car":
+    return new Car()
+
+    case "truck":
+    return new Truck()
+    
+    case "motorcycle":
+    return new Motorcycle()
+
+    default:
+    return null
 }
 }
 }
@@ -104,3 +108,48 @@ const motorcycle = vehicleFactory.createVehicle("motorcycle") // Motorcycle { tu
 ## Builder Pattern
 - This patterns allows to create objects in **steps**
 - It basically has certain methods and functions that add properties or methods to our object
+```
+    const butterfly1 = {
+        name: 'bluerise',
+        color: 'blue'
+    }
+    const butterfly2 = {
+        name: 'pinkrise',
+        color: 'pink'
+    }
+    const addFlyingAbility = (flyObject) => {
+        flyObject.fly = () => {
+            console.log("Now the object can fly");
+        }
+    }
+    addFlyingAbility(butterfly1);
+    butterfly1.fly();
+    // output: Now the object can fly
+        
+```
+
+## Prototype Pattern
+- It allows to create a new object using an existing object's proprties and methods as blueprint or inheritance
+```
+/ We declare our prototype object with two methods
+const enemy = {
+    attack: () => console.log("Pim Pam Pum!"),
+    flyAway: () => console.log("Flyyyy like an eagle!")
+}
+
+// We declare another object that will inherit from our prototype
+const bug1 = {
+    name: "Buggy McFly",
+    phrase: "Your debugger doesn't work with me!"
+}
+
+// With setPrototypeOf we set the prototype of our object
+Object.setPrototypeOf(bug1, enemy)
+
+// With getPrototypeOf we read the prototype and confirm the previous has worked
+console.log(Object.getPrototypeOf(bug1)) // { attack: [Function: attack], flyAway: [Function: flyAway] }
+
+console.log(bug1.phrase) // Your debugger doesn't work with me!
+console.log(bug1.attack()) // Pim Pam Pum!
+console.log(bug1.flyAway()) // Flyyyy like an eagle!
+```
