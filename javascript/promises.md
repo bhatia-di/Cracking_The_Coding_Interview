@@ -82,3 +82,5 @@ fetch('path-to-the-resource-to-be-fetched')
 | built in support for download progress                                   | no way to intercept a request                                               |
 | axios get calls ignore data in the request                               | fetch can have body content with a GET call                                 |
 
+> The immutability of a settled promise is an important feature.
+

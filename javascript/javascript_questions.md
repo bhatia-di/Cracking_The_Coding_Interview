@@ -464,6 +464,12 @@ period or state where variables are named in the memory but not initialized with
 </script>
 ```
 
+## Differences between let,  var and const
+- var declarations are globally scoped or function scoped while let and const are block scoped.
+- var variables can be updated and re-declared within its scope; let variables can be updated but not re-declared; const variables can neither be updated nor re-declared.
+- They are all hoisted to the top of their scope. But while var variables are initialized with undefined, let and const variables are not initialized.
+- While var and let can be declared without being initialized, const must be initialized during declaration.
+
 ## what would be output?
 airthmetic and then concatenation
 ```
@@ -526,6 +532,66 @@ null === undefined // false
 1. arrow functions dont have a reference to this
 2. they cannot be used as constructors
 
+## Difference between normal and arrow functions
+
+1. Normal Functions
+```
+// function declaration
+function sum(a, b) {
+   return a+b;
+}
+// function expression
+const add = function (a, b) {
+   return a+b;
+}
+```
+> The main difference between Function declaration and Function expression is we can invoke the function add(2,3) before its declaration also, but the function sum(2,3) needs to invoke after it is defined.
+
+2. Normal Functions
+- more concise way to write function expressions
+- no declaration approach
+```
+const add = (a, b) => a+b;
+```
+- No reference to arguments array. **Normal functions have access to arguments array.**
+- ```
+  function calcMax() {
+   return Math.max(...arguments);
+  }
+  const arr = [5,4,9,1];
+  console.log(calcMax(arr));
+  // 9
+  ```
+- No prototype object for Arrow Functions
+- Arrow functions cannot be invoked with a new keyword
+- Doesn't have reference to this. if we use this in the arrow function it ll point to the this of the closest non-arrow parent function
+  ```
+  const user = {
+  name: "Jai",
+  getUSername: () => { 
+      return this.name;
+      //refers to window object instead of user object
+  }
+  }
+    ```
+- arrow functions do not allow multiple arguments with same name
+   ```
+  function calcSum(a,a,a)  {
+      console.log(a); //3
+  }
+  calcSum(1,2,3);
+  
+  //causes syntax error: duplicate parameter name not allowed
+  const arrowFn = (a,a,a) => {console.log(a)}
+  
+  ```
+- 
+
+
+
+## Difference between rest versus spread operator
+> The main difference between rest and spread is that the rest operator puts the rest of some specific user-supplied values into a JavaScript array. But the spread syntax expands iterables into individual elements.
+
 ## What is a first class function
 In Javascript, functions are first class objects. First-class functions means when functions in that language are treated like any other variable.
 For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable. For example, in the below example, handler functions assigned to a listener
@@ -581,3 +647,59 @@ console.log(addition(20)); //output: 40 cached
 ## What is a service worker
 rich offline experience
 background sync
+
+
+## How would you optimize imports in javascript
+3 Tips to clean your ES6 imports
+> Barrel Pattern: A barrel is a way to rollup exports from several modules into a single convenient module. The barrel itself is a module file that re-exports selected exports of other modules
+
+// structure
+- components
+-   ---------Accordion.js
+-   ---------Button.js
+
+Normally imports would look like:
+- import Button from 'components/Button'
+
+But with barrel pattern:
+- components
+-   ---------Accordion.js
+-   ---------Button.js
+-   ---------index.js
+//index.js
+- export {default as Button} from ./Button
+
+- This is how importing looks like:
+- import {Button} from "components"
+
+> Use babel.config.js to shorten paths by specifying paths in module-resolver section
+
+## If javascript is single threaded, how does it support async nature
+- Js is single threaded
+- It has 1 call stack and 1 memory heap
+- So how do we get asynchronous code with Javascript then?
+- we can thank js engine for the same. Web API recognizes these tasks and handles them to the browser. Once these tasks are finished by the browser, they are returned and pushed back to the call stack.
+```
+console.log("first")
+setTimeout(() => {
+console.log("second")
+}, 1000)
+console.log("third")
+
+this outputs:
+first
+third
+undefined
+second
+```
+How did this work?
+- console.log("first") is on the stack first, so it gets printed. Next, the engine notices setTimeout, which isn't handled by Javascript and pushes it off to the WebAPI to be done asynchronously. The call stack moves on without caring about the code handed off to the Web APIs and console.log("three") is printed.
+- Next, the Javascript engine's event loop kicks in, like a little kid asking "Are we there yet?" on a road trip. It starts firing, waiting for events to be pushed into it. Since the setTimeout isn't finished, it returns undefined, as the default, well because it hasn't been given the value yet. Once the callback finally does hits we get console.log("second") printed.
+
+## What are child process in Node?
+- The fact that Node.js runs in a single thread does not mean that we can’t take advantage of multiple processes and, of course, multiple machines as well.
+- Using multiple processes is the best way to scale a Node application. Node.js is designed for building distributed applications with many nodes. This is why it’s named Node. Scalability is baked into the platform and it’s not something you start thinking about later in the lifetime of an application.
+
+## What is indexedDB?
+
+## What is debouncing and throttling
