@@ -703,3 +703,35 @@ How did this work?
 ## What is indexedDB?
 
 ## What is debouncing and throttling
+
+👉 What is DOCTYPE in HTML?
+
+👉 What are the new HTML5 features?
+
+👉 What is Flexbox, Difference between flex and grid?
+
+👉 CSS Frameworks you have used?
+
+👉 What is Rest and Spread operator? show with example.
+
+👉 Difference between map and foreach?
+
+👉 What is the slice and splice method in javascript?
+
+👉 What is Hoisting, and how to avoid hoisting?
+
+👉 Have you worked with promises? what are promises?
+
+👉 What is the difference between promises and async await?
+
+👉 Difference between useMemo and React.memo?
+
+👉 What do you understand by Virtual DOM? Explain its works.
+
+👉 Explain the lifecycle methods of React components?
+
+👉 What is prop drilling and how to avoid it, What is Context API?
+
+👉 Write a code to fetch a list of data from a given API (Using fetch or Axios).
+
+👉 Write a code to remove duplicates from an array Input: [1, 2, 3, 4, 5, 1, 3] => Output: [1, 2, 3, 4, 5].
