@@ -55,9 +55,20 @@ The Top-K problem
 The K-th element
 
 ## Solving the top K problem
+# Approach 1
 1. Construct a heap - O(N)
 2. Traversing and deleting the top element (using pop() or poll() for instance), and store the value into the result array T.
 
-> Deleting an element takes log N & we do this k times
-> that's why time complexity for this : K Log N
+> - Deleting an element takes log N & we do this k times
+> - that's why time complexity for this : K Log N
+> - Total time complexity = O(N) + O(K log N)
+
+# Approach 2
+- Construct a Min Heap with size K.
+- Add elements to the Min Heap one by one.
+- When there are K elements in the “Min Heap”, compare the current element with the top element of the Heap:
+- If the current element is no larger than the top element of the Heap, drop it and - proceed to the next element.
+- If the current element is larger than the Heap’s top element, delete the Heap’s top element, and add the current element to the Min Heap .
+- Repeat Steps 2 and 3 until all elements have been iterated.
+- Time complexity O(N log K) 
 
