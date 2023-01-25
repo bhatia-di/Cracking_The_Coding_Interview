@@ -735,3 +735,4 @@ How did this work?
 👉 Write a code to fetch a list of data from a given API (Using fetch or Axios).
 
 👉 Write a code to remove duplicates from an array Input: [1, 2, 3, 4, 5, 1, 3] => Output: [1, 2, 3, 4, 5].
+
